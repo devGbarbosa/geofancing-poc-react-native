@@ -10,6 +10,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.6",
     "react": "18.1.0",
     "react-native": "0.70.4",
     "react-native-background-fetch": "^4.1.5",
