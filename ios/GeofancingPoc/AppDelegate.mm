@@ -57,6 +57,9 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+
+ [[TSBackgroundFetch sharedInstance] didFinishLaunching];
+  
   return YES;
 }
 
@@ -84,6 +87,9 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
 {
+
+#import <TSBackgroundFetch/TSBackgroundFetch.h>
+
 #if DEBUG
   return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index"];
 #else
